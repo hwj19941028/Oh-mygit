@@ -1,4 +1,4 @@
-导出数据
+碌录鲁枚脢媒戮脻
 sqoop export --connect 'jdbc:mysql://192.168.14.41:3306/traffic_db?useUnicode=true&characterEncoding=utf-8' --table vehicle_other_city_month --export-dir /user/hive/warehouse/traffic_analysis2.db/vehicle_other_city_month --username root -password root -m 1 --fields-terminated-by '\001'
  sqoop export --connect 'jdbc:mysql://192.168.14.41:3306/traffic_db?useUnicode=true&characterEncoding=utf-8' --table traffic_belongplace_province --export-dir /user/hive/warehouse/traffic_analysis2.db/traffic_belongplace_province --username root -password root -m 1 --fields-terminated-by '\001'
 sqoop export --connect 'jdbc:mysql://192.168.14.41:3306/traffic_db?useUnicode=true&characterEncoding=utf-8' --table traffic_belongplace_other_province --export-dir /user/hive/warehouse/traffic_analysis2.db/traffic_belongplace_other_province --username root -password root -m 1 --fields-terminated-by '\001'
