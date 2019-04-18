@@ -1,0 +1,26 @@
+讲项目部署到tomcat以后,访问不到资源
+需要修改几处配置文件  
+项目根目录下的 swagger/index.html  
+
+ $(function () {
+      var url = window.location.search.match(/url=([^&]+)/);
+      if (url && url.length > 1) {
+        url = decodeURIComponent(url[1]);
+      } else {
+        //url = "http://petstore.swagger.io/v2/swagger.json";
+        //url = "api-docs";
+        url = "http://192.168.14.22:8080/CarUsed/api-docs";
+      }
+
+需要将上面的ip地址换成你部署服务的IP地址
+
+vi js/configAip.js 
+var beseUrl = 'http://192.168.14.222:8080/CarUsed/'
+将baseURL 修改为  你部署服务的ip  端口 项目名
+
+vi WEB-INF/classes/db.properties
+url=jdbc:mysql://192.168.14.41:3306/car_used?useUnicode=true&characterEncoding=
+UTF-8
+user=root
+pwd=root
+将数据库连接地址改为你存放数据的数据库地址
